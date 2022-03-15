@@ -43,6 +43,12 @@ export class App extends Component {
 
   addContact = data => {
     const { name, number } = data;
+    if (
+      this.state.contacts.findIndex(contact => contact.name === name) !== -1
+    ) {
+      alert(`${name} is already in contacts`);
+      return;
+    }
     this.setState(prevState => {
       return {
         contacts: [
