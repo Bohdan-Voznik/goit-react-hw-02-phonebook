@@ -9,7 +9,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
   );
 };
 
-Contact.propTypes = {
+ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
